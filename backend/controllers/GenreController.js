@@ -43,7 +43,6 @@ exports.genre_detail = (req, res, next) =>{
       })
     }
   )
-
 }
 
 exports.genre_create_get = (req, res, next) => {
@@ -54,10 +53,27 @@ exports.genre_create_post = (req, res, next) => {
 }
 
 exports.genre_delete_get = (req, res, next) => {
-  res.json({message: "genre delete GET", genre: req.params.id})
+  Genre.findById(req.params.id)
+    .exec()
+    .then(result => {
+      if(result === null){
+        res.json("/api/genres")
+      }
+      res.json({
+        title: "Genre Delete",
+        genre: result
+      })
+    }).catch(err => next(err))
 }
+
 exports.genre_delete_post = (req, res, next) => {
-  res.json({message: "genre delete POST", genre: req.params.id})
+  Genre.findById(req.params.id).exec((err, result) => {
+    if(err) return next(err)
+    Genre.findByIdAndDelete(result)
+          .then(res.json("/api/genres"))
+          .catch(err => next(err))
+  })
+
 }
 
 exports.genre_update_get = (req, res, next) => {
