@@ -4,14 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require("dotenv").config()
 var indexRouter = require('./routes/index');
 const apiRouter = require("./routes/api")
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+const mongoose = require("mongoose")
+mongoose.set("strictQuery", false)
+const mongoDB = process.env.MONGODB_URL
+mongoose.connect(mongoDB).catch(err => console.log(error))
+
 
 app.use(logger('dev'));
 app.use(express.json());

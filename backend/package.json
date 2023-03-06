@@ -16,8 +16,11 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "luxon": "^3.3.0",
-    "mongoose": "^7.0.0",
+    "mongoose": "^6.9.2",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.21"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }

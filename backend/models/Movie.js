@@ -7,6 +7,7 @@ const MovieSchema = new Schema({
   summary: {type: String, required: true},
   release_date: {type: Date, required: true},
   genre: [{type: Schema.Types.ObjectId, ref: "Genre"}],
+  rating: {type: String},
   img_url: {type: String, required: true}
 })
 
