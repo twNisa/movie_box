@@ -46,10 +46,10 @@ exports.genre_detail = (req, res, next) =>{
 }
 
 exports.genre_create_get = (req, res, next) => {
-  res.json({message: "genre create GET", genre: req.params.id})
+  res.json({message: "genre create GET"})
 }
 exports.genre_create_post = (req, res, next) => {
-  res.json({message: "genre create POST", genre: req.params.id})
+  res.json({message: "genre create POST"})
 }
 
 exports.genre_delete_get = (req, res, next) => {

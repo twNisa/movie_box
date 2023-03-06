@@ -27,31 +27,11 @@ exports.movie_detail = (req, res, next) =>{
 }
 
 exports.movie_create_get = (req, res, next) => {
-  // async.parallel(
-  //   {
-  //     directors: (callback)=>{
-  //       Director.find(callback)
-  //     },
-  //     genres: (callback)=>{
-  //       Genre.find(callback)
-  //     }
-  //   }
-  // ).then(results => {
-  //     console.log(results)
-  //     res.json({
-  //       title: "Add new movie",
-  //       directors: results.directors,
-  //       genres: results.genres
-  //     })
-  // }).catch(err => {
-  //   console.log(err)
-  //   return next(err)
-  // })
-  res.send("get")
+  res.json({message: "movie create GET"})
 }
 
 exports.movie_create_post = (req, res, next) => {
-  res.json({message: "movie create POST", movie: req.params.id})
+  res.json({message: "movie create POST"})
 }
 
 exports.movie_delete_get = (req, res, next) => {
