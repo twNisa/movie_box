@@ -1,5 +1,6 @@
 const express = require("express")
 const router = express.Router()
+
 const movieController = require("../controllers/MovieController")
 const directorController = require("../controllers/DirectorController")
 const genreController = require("../controllers/GenreController"
