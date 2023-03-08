@@ -13,7 +13,7 @@ var app = express();
 const mongoose = require("mongoose")
 mongoose.set("strictQuery", false)
 const mongoDB = process.env.MONGODB_URL
-mongoose.connect(mongoDB).catch(err => console.log(error))
+mongoose.connect(mongoDB).catch(err => console.log(err))
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

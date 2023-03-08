@@ -10,7 +10,7 @@ const DirectorSchema = new Schema({
 
 DirectorSchema.virtual("fullname")
   .get(function() { 
-    let fulname = ""
+    let fullname = ""
     if(this.first_name && this.last_name){
       fullname = this.first_name + " " + this.last_name
     }

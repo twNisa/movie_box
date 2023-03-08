@@ -6,9 +6,6 @@ import styled from "styled-components"
 
 const HeaderContainer = styled.header`
   width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
 `
@@ -31,6 +28,7 @@ const HeaderContent = styled.section`
     }
   }
 `
+
 export default function Header(){
   return (
     <HeaderContainer>

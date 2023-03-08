@@ -14,4 +14,8 @@ const MovieSchema = new Schema({
 MovieSchema.virtual("url")
   .get(function() { return `/movie/${this._id}`})
 
+MovieSchema.virtual("release_year")
+  .get(function() {
+    return this.release_date.getFullYear()
+  })
 module.exports = mongoose.model("Movie", MovieSchema)

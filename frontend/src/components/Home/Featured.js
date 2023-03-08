@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Movie(){
+export default function Featured(){
 
   return (
     <>
-
-      movie
+    featured
+      
     </>
   )
 }
